@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flutter Web App</title>
+
+  <!-- Add the Google Sign-In Client ID -->
+  <meta name="google-signin-client_id" content="217661376641-tbb780epekipucjl93lnrjnq99k25iuo.apps.googleusercontent.com">
+
+  <!-- Firebase Initialization Script -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+    import { getAuth, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+    
+    const firebaseConfig = {
+      apiKey: "AIzaSyDh-IPs6PvIFywqj86_B_gyjHUYsg-chX0",
+      authDomain: "sign-in-eff96.firebaseapp.com",
+      projectId: "sign-in-eff96",
+      storageBucket: "sign-in-eff96.appspot.com",
+      messagingSenderId: "217661376641",
+      appId: "1:217661376641:web:fea17d5c7bbc7857076580"
+    };
+    
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const provider = new GoogleAuthProvider(); // Expose function to global scope
+  </script>
+
+  <!-- Paystack JavaScript Integration -->
+  <script src="https://js.paystack.co/v1/inline.js"></script>
+
+  <!-- Paystack Payment Function -->
+  <script>
+    // Your Paystack public key
+    const paystackPublicKey = "pk_test_5b221a2631353c9e70998d6b74247d17e0a6201d"; // Replace with your actual public key
+
+    function initiatePayment(amount, email) {
+      var handler = PaystackPop.setup({
+        key: paystackPublicKey,
+        email: email,
+        amount: amount * 1,  // Convert amount to kobo (for Paystack)
+        currency: "GHS",
+        ref: "ref-" + Math.floor(Math.random() * 1000000000), // Random reference for the transaction
+        callback: function(response) {
+          // Handle success
+          alert("Payment successful! Transaction Reference: " + response.reference);
+        },
+        onClose: function() {
+          // Handle cancellation
+          alert("Payment cancelled!");
+        }
+      });
+
+      handler.openIframe();
+    }
+  </script>
+</head>
+<body>
+  <!-- Flutter will attach the app here -->
+  <script src="main.dart.js" type="application/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+name: hands_on_practicals
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=3.3.4 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # table_calendar: ^3.1.2
+  http: ^1.2.2
+  firebase_auth: ^5.3.2
+  firebase_auth_web: ^5.13.3
+  firebase_core: ^3.7.0
+  google_sign_in: ^6.2.2
+  provider: ^6.1.2
+  # flutter_paystack: ^1.0.7
+  # 
+  # flutter_paystack_payment: ^0.1.4
+  # flutter_paystack_payment: ^0.1.3+1
+  flutter_paystack_plus: ^2.1.0  
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/google.png
+    - assets/images/apple.png
+    - assets/images/controler.jpg
+    - assets/images/fan.jpg
+    - assets/images/laptops.jpg
+    - assets/images/iron.jpeg
+    - assets/images/airpod.jpeg
+    - assets/images/phones.jpg
+    - assets/images/television.jpg
+    - assets/images/desktop.jpeg
+    - assets/images/controller1.jpeg
+    - assets/images/controller2.jpeg
+    - assets/images/controller3.jpeg
+    - assets/images/controller4.jpeg
+    - assets/images/controller5.jpeg
+    - assets/images/controller6.jpeg
+    - assets/images/controller7.jpeg
+    - assets/images/controller8.jpeg
+    - assets/images/controller9.jpeg
+    - assets/images/p1.jpg
+    - assets/images/p2.jpg
+    - assets/images/p3.jpg
+    - assets/images/p4.jpg
+    - assets/images/p5.jpg
+    - assets/images/p6.jpeg
+    - assets/images/p7.jpeg
+    - assets/images/l1.jpeg
+    - assets/images/l2.jpeg
+    - assets/images/l3.jpg
+    - assets/images/l4.jpg
+    - assets/images/l5.jpg
+    - assets/images/l6.jpg
+    - assets/images/l7.jpg
+    - assets/images/p8.jpg
+    - assets/images/l8.jpg
+    # - assets/images/controller9.jpeg
+    # - assets/images/controller9.jpeg
+    - assets/images/i13.jpeg
+    - assets/images/p6.jpeg
+    - assets/images/p7.jpeg
+    - assets/images/s_25_ultra.jpg
+    - assets/images/s_25.jpeg
+    - assets/images/s25_ultra.jpeg
+    - assets/images/s25.jpeg
+    - assets/images/p5.jpg
+    - assets/images/p2.jpg
+    - assets/images/p1.jpg
+    - assets/images/i14.jpeg
+    - assets/images/i16_pro.jpeg
+    - assets/images/i15.jpeg
+    - assets/images/sam1.webp
+    - assets/images/sam2.webp
+    - assets/images/T1.jpeg
+    - assets/images/T2.jpeg
+    - assets/images/T3.jpg
+    - assets/images/T4.jpeg
+    - assets/images/T5.jpg
+    - assets/images/T6.jpg
+    - assets/images/T7.jpg
+    - assets/images/sam1.webp
+    - assets/images/r1.jpeg
+    - assets/images/r2.jpeg
+    - assets/images/r3.jpeg
+    - assets/images/r4.jpg
+    - assets/images/r5.jpg
+    - assets/images/r6.jpg
+    - assets/images/r7.jpg
+    - assets/images/r8.jpg
+    - assets/images/r9.jpg
+    - assets/images/r2.jpeg
+
