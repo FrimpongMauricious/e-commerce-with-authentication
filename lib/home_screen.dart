@@ -1,10 +1,11 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-import 'package:hands_on_practicals/loged_in.dart';
-import 'package:hands_on_practicals/phones_list.dart';
+import 'package:hands_on_practicals/email_varification.dart';
+//import 'package:hands_on_practicals/loged_in.dart';
+//import 'package:hands_on_practicals/phones_list.dart';
 import 'package:hands_on_practicals/product_screen.dart';
-import 'package:hands_on_practicals/login_screen.dart';
+//import 'package:hands_on_practicals/login_screen.dart';
 import 'package:hands_on_practicals/log_in_direct.dart';  // Import your LogedIn screen
 
 // Google Sign-In Button Widget
@@ -61,17 +62,26 @@ class _HomeScreenState extends State<HomeScreen> {
         email: _emailController.text,
         password: _passwordController.text,
       );
+      final user=FirebaseAuth.instance.currentUser;
+      user?.sendEmailVerification();
       
       // Navigate to the LogedIn screen after successful sign-up
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(builder: (context) => const ProductScreen()), // Navigate to LogedIn screen
-      );
+      // Navigator.pushReplacement(
+      //   context,
+      //   MaterialPageRoute(builder: (context) => const ProductScreen()), // Navigate to LogedIn screen
+      // );
+      Navigator.of(context).push(MaterialPageRoute(builder: (context){
+        return Verification();
+      }));
       
     } on FirebaseAuthException catch (e) {
       setState(() {
         _errorMessage = e.message ?? "An error occurred";
+        
+        
       });
+  
+    
     }
   }
 
@@ -92,7 +102,12 @@ class _HomeScreenState extends State<HomeScreen> {
       // Sign in with Google
       final UserCredential userCredential = await _auth.signInWithCredential(credential);
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Signed in with Google: ${userCredential.user?.email}')),
+        SnackBar(content: Text('Signed in with Google: ${userCredential.user?.email}',
+        style: TextStyle(
+          color: Colors.greenAccent,
+          fontSize: 15
+        ),
+        )),
       );
     } on FirebaseAuthException catch (e) {
       setState(() {
@@ -134,9 +149,12 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 GestureDetector(
                   onTap: _navigateToLogin,  // Navigate to login screen
-                  child: const Text(
+                  child: Text(
                     'Log in',
-                    style: TextStyle(color: Colors.purple, fontSize: 12),
+                    style: TextStyle(color: Colors.purple, 
+                    fontSize: 12,
+                    fontWeight: FontWeight.bold
+                    ),
                   ),
                 ),
               ],

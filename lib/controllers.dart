@@ -37,7 +37,7 @@ class Contollers extends StatelessWidget {
           const SizedBox(height: 10),
           Padding(
             padding: const EdgeInsets.only(left:35.0),
-            child: Image.asset(image),
+            child: Image.network(image),
           ),
           const SizedBox(height: 10),
           Text(

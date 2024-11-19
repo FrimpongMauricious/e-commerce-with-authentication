@@ -45,6 +45,8 @@ final List<Map<String, Object>> controllers = [
     'price': 'GH₵ 90.00'
   },
 ];
+
+
 final List<Map<String,Object>> flashSale=[
   {
     'name': 'i phone 15',
@@ -84,48 +86,48 @@ final List<Map<String,Object>> flashSale=[
 ];
 final List<Map<String, Object>> phones=[
   {
-      'name': 'Galaxy S25 Ultra',
-    'image': 'assets/images/s25.jpeg',
+    'name': 'Galaxy S25 Ultra',
+    'image': 'https://raw.githubusercontent.com/FrimpongMauricious/new_images/main/s_25_ultra.jpg',
     'price': 'GH₵ 18,100.00'
   },
   {
-      'name': 'I phone 16 pro',
-    'image': 'assets/images/i16_pro.jpeg',
+    'name': 'I phone 16 pro',
+    'image': 'https://raw.githubusercontent.com/FrimpongMauricious/new_images/main/i16_pro.jpeg',
     'price': 'GH₵ 26,000.00'
   },
   {
-      'name': 'Galaxy S 25',
-    'image': 'assets/images/s25_ultra.jpeg',
+    'name': 'Galaxy S 25',
+    'image': 'https://raw.githubusercontent.com/FrimpongMauricious/new_images/main/s_25.jpeg',
     'price': 'GH₵ 17,500.00'
   },
   {
-      'name': 'I phone 14',
-    'image': 'assets/images/i14.jpeg',
+    'name': 'I phone 14',
+    'image': 'https://raw.githubusercontent.com/FrimpongMauricious/new_images/main/i14.jpeg',
     'price': 'GH₵ 18,500.00'
   },
   {
       'name': 'I phone 12 pro max',
-    'image': 'assets/images/i16_pro.jpeg',
+    'image': 'https://raw.githubusercontent.com/FrimpongMauricious/new_images/main/i16_pro.jpeg',
     'price': 'GH₵ 15,000.00'
   },
   {
       'name': 'S 25 ',
-    'image': 'assets/images/p3.jpg',
+    'image': 'https://raw.githubusercontent.com/FrimpongMauricious/new_images/main/p3.jpg',
     'price': 'GH₵ 16,800.00'
   },
   {
       'name': ' Samasung Galaxy S 25',
-    'image': 'assets/images/s25.jpeg',
+    'image': 'https://raw.githubusercontent.com/FrimpongMauricious/new_images/main/s25.jpeg',
     'price': 'GH₵ 20,000.00'
   },
   {
       'name': 'S 25',
-    'image': 'assets/images/p7.jpeg',
+    'image': 'https://raw.githubusercontent.com/FrimpongMauricious/new_images/main/p7.jpeg',
     'price': 'GH₵ 17,000.00'
   },
   {
       'name': 'I phone 13',
-    'image': 'assets/images/i13.jpeg',
+    'image': 'https://raw.githubusercontent.com/FrimpongMauricious/new_images/main/i13.jpeg',
     'price': 'GH₵ 17,000.00'
   },
 
@@ -133,47 +135,47 @@ final List<Map<String, Object>> phones=[
 final List<Map<String,Object>> laptops=[
   {
      'name': 'Mac Book',
-    'image': 'assets/images/l1.jpeg',
+    'image': 'https://raw.githubusercontent.com/FrimpongMauricious/new_images/main/l1.jpeg',
     'price': 'GH₵ 9,000.00'
   },
    {
      'name': 'Mac Book 554 GB',
-    'image': 'assets/images/l2.jpeg',
+    'image': 'https://raw.githubusercontent.com/FrimpongMauricious/new_images/main/l2.jpeg',
     'price': 'GH₵ 8,500.00'
   },
    {
      'name': 'Macintosh 256 GB',
-    'image': 'assets/images/l3.jpg',
+    'image': 'https://raw.githubusercontent.com/FrimpongMauricious/new_images/main/l8.jpg',
     'price': 'GH₵ 6,000.00'
   },
    {
      'name': 'Mac book',
-    'image': 'assets/images/l6.jpg',
+    'image': 'https://raw.githubusercontent.com/FrimpongMauricious/new_images/main/l3.jpg',
     'price': 'GH₵ 9,000.00'
   },
    {
      'name': 'Apple PCs',
-    'image': 'assets/images/l4.jpg',
+    'image': 'https://raw.githubusercontent.com/FrimpongMauricious/new_images/main/l4.jpg',
     'price': 'GH₵ 11,000.00'
   },
    {
      'name': 'Apple Mac Book 256 GB',
-    'image': 'assets/images/l5.jpg',
+    'image': 'https://raw.githubusercontent.com/FrimpongMauricious/new_images/main/l5.jpg',
     'price': 'GH₵ 17,000.00'
   },
    {
      'name': 'Mac Book Double processor',
-    'image': 'assets/images/l6.jpg',
+    'image': 'https://raw.githubusercontent.com/FrimpongMauricious/new_images/main/l6.jpg',
     'price': 'GH₵ 10,500.00'
   },
    {
      'name': 'Mac Book 128 GB',
-    'image': 'assets/images/l7.jpg',
+    'image': 'https://raw.githubusercontent.com/FrimpongMauricious/new_images/main/l7.jpg',
     'price': 'GH₵ 7,000.00'
   },
    {
      'name': 'Mac Book 1 TB',
-    'image': 'assets/images/l8.jpg',
+    'image': 'https://raw.githubusercontent.com/FrimpongMauricious/new_images/main/l8.jpg',
     'price': 'GH₵ 12,000.00'
   },
 
@@ -181,47 +183,50 @@ final List<Map<String,Object>> laptops=[
 final List<Map<String,Object>> televisions=[
   {
      'name': 'Samsung TV',
-    'image': 'assets/images/sam1.webp',
+    'image': 'https://raw.githubusercontent.com/FrimpongMauricious/new_images/main/sam1.webp'
+,
     'price': 'GH₵ 12,000.00'
   },
    {
      'name': 'Samsung 64 inches',
-    'image': 'assets/images/sam2.webp',
+    'image': 'https://raw.githubusercontent.com/FrimpongMauricious/new_images/main/T2.jpeg'
+,
     'price': 'GH₵ 12,000.00'
   },
    {
      'name': 'HD Tv',
-    'image': 'assets/images/T1.jpeg',
+    'image': 'https://raw.githubusercontent.com/FrimpongMauricious/new_images/main/T3.jpg'
+,
     'price': 'GH₵ 12,000.00'
   },
    {
      'name': "Life's Good",
-    'image': 'assets/images/T2.jpeg',
+    'image': 'https://raw.githubusercontent.com/FrimpongMauricious/new_images/main/T4.jpeg',
     'price': 'GH₵ 12,000.00'
   },
    {
      'name': 'Apple Tv',
-    'image': 'assets/images/T3.jpg',
+    'image': 'https://raw.githubusercontent.com/FrimpongMauricious/new_images/main/T5.jpg',
     'price': 'GH₵ 12,000.00'
   },
    {
      'name': 'Hisense Tv',
-    'image': 'assets/images/T4.jpeg',
+    'image': 'https://raw.githubusercontent.com/FrimpongMauricious/new_images/main/T6.jpg',
     'price': 'GH₵ 12,000.00'
   },
    {
      'name': 'Crystal Clear Tv',
-    'image': 'assets/images/T5.jpg',
+    'image': 'https://raw.githubusercontent.com/FrimpongMauricious/new_images/main/T7.jpg',
     'price': 'GH₵ 12,000.00'
   },
    {
      'name': 'LG',
-    'image': 'assets/images/T6.jpg',
+    'image': 'https://raw.githubusercontent.com/FrimpongMauricious/new_images/main/sam2.webp',
     'price': 'GH₵ 8,000.00'
   },
    {
      'name': 'Feel at Home  ',
-    'image': 'assets/images/T7.jpg',
+    'image': 'https://raw.githubusercontent.com/FrimpongMauricious/new_images/main/sam1.webp',
     'price': 'GH₵ 10,000.00'
   },
 
@@ -229,47 +234,47 @@ final List<Map<String,Object>> televisions=[
 final List<Map<String,Object>> irons=[
   {
      'name': 'electronic pressing iron',
-    'image': 'assets/images/r1.jpeg',
+    'image': 'https://raw.githubusercontent.com/FrimpongMauricious/new_images/main/r1.jpeg',
     'price': 'GH₵ 350.00'
   },
    {
      'name': 'The Boss',
-    'image': 'assets/images/r2.jpeg',
+    'image': 'https://raw.githubusercontent.com/FrimpongMauricious/new_images/main/r2.jpeg',
     'price': 'GH₵ 1,000.00'
   },
    {
      'name': 'pressing iron',
-    'image': 'assets/images/r3.jpeg',
+    'image': 'https://raw.githubusercontent.com/FrimpongMauricious/new_images/main/r3.jpeg',
     'price': 'GH₵ 500.00'
   },
    {
      'name': "Hisense pressing Iron",
-    'image': 'assets/images/r4.jpg',
+    'image': 'https://raw.githubusercontent.com/FrimpongMauricious/new_images/main/r4.jpg',
     'price': 'GH₵ 800.00'
   },
    {
      'name': 'pressing iron',
-    'image': 'assets/images/r5.jpg',
+    'image': 'https://raw.githubusercontent.com/FrimpongMauricious/new_images/main/r5.jpg',
     'price': 'GH₵ 400.00'
   },
    {
      'name': 'Hisense iron',
-    'image': 'assets/images/r6.jpg',
+    'image': 'https://raw.githubusercontent.com/FrimpongMauricious/new_images/main/r6.jpg',
     'price': 'GH₵ 430.00'
   },
    {
      'name': 'chargeable iron',
-    'image': 'assets/images/r7.jpg',
+    'image': 'https://raw.githubusercontent.com/FrimpongMauricious/new_images/main/r7.jpg',
     'price': 'GH₵ 550.00'
   },
    {
      'name': 'Hisense',
-    'image': 'assets/images/r8.jpg',
+    'image': 'https://raw.githubusercontent.com/FrimpongMauricious/new_images/main/r8.jpg',
     'price': 'GH₵ 720.00'
   },
    {
      'name': 'Box iron',
-    'image': 'assets/images/r9.jpg',
+    'image': 'https://raw.githubusercontent.com/FrimpongMauricious/new_images/main/r9.jpg',
     'price': 'GH₵ 600.00'
   },
 

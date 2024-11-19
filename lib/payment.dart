@@ -1,6 +1,7 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_paystack_plus/flutter_paystack_plus.dart';
+import 'package:hands_on_practicals/product_screen.dart';
 //import 'dart:html' as html;
 
 
@@ -28,7 +29,7 @@ class PaystackPaymentScreenState extends State<PaystackPaymentScreen> {
       setState(() {
 
       }
-      
+
       );
     });
   }
@@ -36,6 +37,33 @@ class PaystackPaymentScreenState extends State<PaystackPaymentScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        actions: [
+          PopupMenuButton(
+            onSelected: (value) {
+              if(value=='cancel'){
+                Navigator.of(context).push(MaterialPageRoute(builder: (context){
+                  return  Homescreen();
+                }));
+              }
+              if(value=='home'){
+                Navigator.of(context).push(MaterialPageRoute(builder: (context){
+                  return ProductScreen();
+                }));
+              }
+            },
+            itemBuilder: (BuildContext context){
+            return [
+              PopupMenuItem(
+                value: 'cancel',
+                child: Text('Cancel Payment')),
+                PopupMenuItem(
+                  value: 'home',
+                  child: Text('Return Home'))
+            ];
+          })
+        ],
+      ),
       backgroundColor: const Color.fromARGB(255, 238, 237, 237),
       body: Center(
         child: Container(
@@ -58,8 +86,8 @@ class PaystackPaymentScreenState extends State<PaystackPaymentScreen> {
                     color: Colors.black,
                         fontWeight: FontWeight.bold
                   )
-                        
-                      
+
+
                 ),
               ),
               const SizedBox(height: 48),
@@ -70,10 +98,9 @@ class PaystackPaymentScreenState extends State<PaystackPaymentScreen> {
                   hintText: 'Email',
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(15)),
-                    
                   ),
                 ),
-                
+
               ),
               const SizedBox(height: 24),
               // Amount input field
@@ -83,7 +110,7 @@ class PaystackPaymentScreenState extends State<PaystackPaymentScreen> {
                   hintText: 'Amount(¢)',
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(15)),
-                    
+
                   ),
                 ),
                 keyboardType: TextInputType.number,
@@ -133,11 +160,11 @@ class PaystackPaymentScreenState extends State<PaystackPaymentScreen> {
                   child: Text(
                     'Pay ${amountController.text.isEmpty ? '' : '¢${amountController.text}'} with Paystack',
                     style: TextStyle(
-                      
+
                           color: Colors.white,
                           fontWeight: FontWeight.w500,
                     )
-                        
+
                   ),
                 ),
               ),

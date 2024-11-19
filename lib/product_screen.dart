@@ -5,7 +5,7 @@ import 'package:hands_on_practicals/phones_list.dart';
 //import 'package:hands_on_practicals/settings.dart';
 import 'package:flutter/material.dart';
 import 'package:hands_on_practicals/controller_list.dart';
-import 'package:flutter/widgets.dart';
+//import 'package:flutter/widgets.dart';
 import 'package:hands_on_practicals/laptop_list.dart';
 import 'package:hands_on_practicals/television_list.dart';
 import 'package:hands_on_practicals/iron_list.dart';
@@ -74,7 +74,7 @@ class _HomescreenState extends State<Homescreen> {
                         children: [
                           Text('Delivery address'),
                           Text(
-                            '92 High Street, London',
+                            'Kumasi-Adum, PZ',
                             style: TextStyle(
                                 color: Colors.black,
                                 fontSize: 16,

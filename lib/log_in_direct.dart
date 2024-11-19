@@ -1,6 +1,7 @@
 // login_screen.dart
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:hands_on_practicals/email_varification.dart';
 import 'package:hands_on_practicals/product_screen.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -25,12 +26,25 @@ class _LoginScreenState extends State<LoginScreen> {
         email: _emailController.text,
         password: _passwordController.text,
       );
+      final user=FirebaseAuth.instance.currentUser;
+      if(user?.emailVerified ?? false){
+        Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context){
+          return ProductScreen();
+        }));
+      }
+      else{
+        final user=FirebaseAuth.instance.currentUser;
+        user?.sendEmailVerification();
+        Navigator.of(context).push(MaterialPageRoute(builder: (context){
+          return Verification();
+        }));
+      }
       
       // Navigate to the home page or logged-in screen after successful login
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(builder: (context) => const ProductScreen()), // Navigate to logged-in screen
-      );
+      // Navigator.pushReplacement(
+      //   context,
+      //   MaterialPageRoute(builder: (context) => const ProductScreen()), // Navigate to logged-in screen
+      // );
     } on FirebaseAuthException catch (e) {
       setState(() {
         _errorMessage = e.message ?? "An error occurred";
